@@ -1,0 +1,55 @@
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    position: absolute;
+    right: -500px;
+    top: 81px;
+    width: 444px;
+    min-height: 268px;
+    z-index: -1;
+    background-color: #FFF;
+    border-radius: 16px;
+    filter: drop-shadow(0px 2px 8px #21252914) drop-shadow(0px 1px 2px #2125291A);
+    opacity: 0;
+    transition: opacity 0.2s, right 0.3s;
+
+    &--empty {
+        width: 301px;
+        height: 227px;
+    }
+
+    &--active {
+        opacity: 1;
+        right: 20px;
+        z-index: 1;
+    }
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &__total {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 0;
+            display: block;
+            height: 1px;
+            width: 396px;
+            background-color: #DEE2E6;
+        }
+    }
+
+
+}
